@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <string.h>
 
+//Start
 int main(int argc, char *argv[])
 {
     openlog("writerlog", LOG_CONS | LOG_PID, LOG_USER);
