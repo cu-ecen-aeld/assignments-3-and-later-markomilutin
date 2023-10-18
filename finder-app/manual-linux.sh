@@ -5,6 +5,9 @@
 set -e
 set -u
 
+APP_DIR=$(realpath $(dirname $0))
+echo "Running from: " ${APP_DIR}
+
 OUTDIR=/tmp/aeld
 KERNEL_REPO=git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git
 KERNEL_VERSION=v5.1.10
@@ -98,7 +101,8 @@ sudo mknod -m 666 dev/null c 1 3
 sudo mknod -m 666 console c 5 1
 
 # TODO: Clean and build the writer utility
-cd ~/courses/assignment-1-markomilutin/finder-app
+echo "Going to " ${APP_DIR}
+cd ${APP_DIR}
 make clean
 make CROSS_COMPILE=aarch64-none-linux-gnu-
 
