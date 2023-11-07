@@ -51,10 +51,10 @@ fi
 
 for i in $( seq 1 $NUMFILES)
 do
-	./bin/writer "$WRITEDIR/${username}$i.txt" "$WRITESTR"
+	/bin/writer "$WRITEDIR/${username}$i.txt" "$WRITESTR"
 done
 
-OUTPUTSTRING=$(./bin/finder.sh "$WRITEDIR" "$WRITESTR")
+OUTPUTSTRING=$(/bin/finder.sh "$WRITEDIR" "$WRITESTR")
 
 # remove temporary directories
 rm -rf /tmp/aeld-data
