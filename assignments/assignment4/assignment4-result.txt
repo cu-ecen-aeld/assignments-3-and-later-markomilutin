@@ -1,0 +1,1 @@
+Dirpath: /tmp/aeld-data Search Str: AELD_IS_FUN Num param: 2 The number of files are 10 and the number of matching lines are 10
